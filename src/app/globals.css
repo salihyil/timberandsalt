@@ -102,9 +102,9 @@
     top: calc(50% - 17px);
     display: inline-block;
     background-color: #fff;
-    width: 240px;
+    width: 150px;
     height: 1px;
-    left: -125px;
+    left: -105px;
     transform-origin: right;
   }
 
@@ -114,9 +114,9 @@
     top: calc(50% - 17px);
     display: inline-block;
     background-color: #fff;
-    width: 240px;
+    width: 150px;
     height: 1px;
-    right: -125px;
+    right: -105px;
     transform-origin: left;
   }
 

@@ -51,31 +51,32 @@ const Cuisine = (props: Props) => {
   );
 
   return (
-    <div ref={currentRef} className="flex py-[200px] pl-[2.8%]">
-      <div className="relative w-1/2">
-        <div className="h-full overflow-hidden">
-          <motion.div
-            className="h-full"
-            style={{
-              backgroundImage: `url('/cuisine.jpg')`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              filter: "brightness(1.05)",
-              translateY: imageTranslateY,
-              scale: imageScale,
-            }}
-          ></motion.div>
-        </div>
-
+    <div
+      ref={currentRef}
+      className="flex py-[100px] pl-[2.8%] max-[880px]:flex-col min-[880px]:py-[140px] "
+    >
+      <div className="h-[500px] w-5/6 min-[880px]:w-1/2">
         <motion.div
-          style={{ translateY }}
-          className="absolute -bottom-[50px] -right-[50px]"
+          className="relative h-full"
+          style={{
+            backgroundImage: `url('/cuisine.jpg')`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            filter: "brightness(1.05)",
+            translateY: imageTranslateY,
+            scale: imageScale,
+          }}
         >
-          <Image src={"/wine.png"} alt="wine" width={202} height={281} />
+          <motion.div
+            style={{ translateY }}
+            className="absolute -bottom-[50px] -right-[50px]"
+          >
+            <Image src={"/wine.png"} alt="wine" width={202} height={281} />
+          </motion.div>
         </motion.div>
       </div>
-      <div className="w-1/2 pl-[90px] pt-[9%]">
+      <div className="w-full pt-[9%] max-[880px]:mb-[70px] min-[880px]:w-1/2 min-[880px]:pl-[90px]">
         <div className="mt-[35px]">
           <AnimatedTextSplitter
             text="CUISINE"
@@ -85,7 +86,7 @@ const Cuisine = (props: Props) => {
             isInView={isInView}
           />
         </div>
-        <div className="w-[58%] pl-[33px]">
+        <div className="w-[58%] pl-[33px] max-[880px]:w-full max-[880px]:pr-[33px]">
           <h2>Our Goals & History</h2>
           <p className="my-[10px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -130,9 +130,10 @@ const SwipeCarousel: React.FC = () => {
         >
           <motion.a
             href="/"
-            className="carausel-text-before carausel-text-after absolute left-1/2 top-1/2 flex h-auto -translate-x-1/2 -translate-y-1/2 flex-col items-center px-[165px] pb-[10px]"
+            className="carausel-text-before carausel-text-after absolute left-1/2 top-1/2 flex h-auto -translate-x-1/2 -translate-y-1/2 flex-col items-center px-[50px] pb-[10px] min-[800px]:px-[165px]"
           >
-            <span className="font-cormorant text-[80px] uppercase leading-[1em] tracking-wider text-white">
+            {/* carausel-text-before carausel-text-after absolute left-1/2 top-1/2 flex h-auto -translate-x-1/2 -translate-y-1/2 flex-col items-center px-[100px] pb-[10px] min-[800px]:px-[165px] */}
+            <span className="font-cormorant text-[37px] uppercase leading-[1em] tracking-wider text-white min-[800px]:text-[80px]">
               {items[currentIndex].title}
             </span>
             <span className="font-jost text-[17px] text-white">

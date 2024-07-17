@@ -40,43 +40,41 @@ const Header = (props: Props) => {
     });
   };
   return (
-    <div ref={ref}>
-      <header className="page-header">
-        <div className={`header-inner`}>
-          <NavBar />
+    <header ref={ref} className="page-header">
+      <div className={`header-inner`}>
+        <NavBar />
 
-          <Link
-            className="relative mt-8 flex flex-shrink-0 items-center justify-center"
-            href="/"
-          >
-            <Image src={"/logo.png"} alt="logo" height={200} width={200} />
-          </Link>
+        <Link
+          className="relative mt-8 flex flex-shrink-0 items-center justify-center"
+          href="/"
+        >
+          <Image src={"/logo.png"} alt="logo" height={200} width={200} />
+        </Link>
 
-          <div className="hidden h-full w-full items-center justify-end xl:flex">
-            <Button asChild>
-              <Link href={"/book-a-table"}>
-                Book a table
-                <span className="pointer-events-none absolute inset-0 m-1">
-                  <span className="absolute left-0 top-0 h-px w-0 bg-button-border opacity-50 transition-all duration-700 ease-in-out group-hover:w-full"></span>
-                  <span className="absolute bottom-0 right-0 h-px w-0 bg-button-border opacity-50 transition-all duration-700 ease-in-out group-hover:w-full"></span>
-                  <span className="absolute left-0 top-0 h-0 w-px bg-button-border opacity-50 transition-all delay-100 duration-700 ease-in-out group-hover:h-full"></span>
-                  <span className="absolute bottom-0 right-0 h-0 w-px bg-button-border opacity-50 transition-all delay-100 duration-700 ease-in-out group-hover:h-full"></span>
-                </span>
-              </Link>
-            </Button>
-          </div>
-
-          <span className="qodef-m-icon qodef--open">
-            <span className="qodef-m-lines">
-              <span className="qodef-m-line qodef--1"></span>
-              <span className="qodef-m-line qodef--2"></span>
-              <span className="qodef-m-line qodef--3"></span>
-              <span className="qodef-m-line qodef--4"></span>
-            </span>
-          </span>
+        <div className="flex h-full w-full items-center justify-end max-[1200px]:hidden">
+          <Button asChild>
+            <Link href={"/book-a-table"}>
+              Book a table
+              <span className="pointer-events-none absolute inset-0 m-1">
+                <span className="absolute left-0 top-0 h-px w-0 bg-button-border opacity-50 transition-all duration-700 ease-in-out group-hover:w-full"></span>
+                <span className="absolute bottom-0 right-0 h-px w-0 bg-button-border opacity-50 transition-all duration-700 ease-in-out group-hover:w-full"></span>
+                <span className="absolute left-0 top-0 h-0 w-px bg-button-border opacity-50 transition-all delay-100 duration-700 ease-in-out group-hover:h-full"></span>
+                <span className="absolute bottom-0 right-0 h-0 w-px bg-button-border opacity-50 transition-all delay-100 duration-700 ease-in-out group-hover:h-full"></span>
+              </span>
+            </Link>
+          </Button>
         </div>
-        <StickyHeader isScrollUp={isScrollUp} isInView={isInView} />
-      </header>
+
+        <span className="qodef-m-icon qodef--open">
+          <span className="qodef-m-lines">
+            <span className="qodef-m-line qodef--1"></span>
+            <span className="qodef-m-line qodef--2"></span>
+            <span className="qodef-m-line qodef--3"></span>
+            <span className="qodef-m-line qodef--4"></span>
+          </span>
+        </span>
+      </div>
+      <StickyHeader isScrollUp={isScrollUp} isInView={isInView} />
 
       {!isInView && (
         <Button
@@ -93,7 +91,7 @@ const Header = (props: Props) => {
           </span>
         </Button>
       )}
-    </div>
+    </header>
   );
 };
 

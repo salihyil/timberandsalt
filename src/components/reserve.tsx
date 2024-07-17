@@ -56,8 +56,11 @@ const Reserve = (props: Props) => {
   };
 
   return (
-    <div ref={currentRef} className="container mx-auto flex py-[140px]">
-      <div className="w-1/2">
+    <div
+      ref={currentRef}
+      className="container mx-auto flex flex-col gap-14 py-[140px] min-[880px]:flex-row"
+    >
+      <div className="w-full min-[880px]:w-1/2">
         <div className="mt-[35px]">
           <AnimatedTextSplitter
             text="RESERVE"
@@ -77,7 +80,7 @@ const Reserve = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="relative w-1/2">
+      <div className="relative h-[600px] w-full min-[880px]:w-1/2">
         <div className="h-full overflow-hidden">
           <motion.div
             className="h-full"

@@ -61,7 +61,7 @@ const Footer = (props: Props) => {
     <footer ref={currentRef} className="h-full w-full bg-[#042726]">
       <div className="container mx-auto pb-[105px] pt-[135px]">
         <motion.div
-          className="grid grid-cols-3 items-center justify-items-center"
+          className="grid grid-cols-1 items-center justify-items-center min-[880px]:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -71,7 +71,7 @@ const Footer = (props: Props) => {
             variants={itemVariants}
           >
             <motion.div
-              className="absolute right-0 top-0 w-px bg-white/50"
+              className="absolute right-0 top-0 hidden bg-white/50 min-[880px]:block min-[880px]:w-px"
               variants={borderYVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -100,7 +100,7 @@ const Footer = (props: Props) => {
             variants={itemVariants}
           >
             <motion.div
-              className="absolute right-0 top-0 w-px bg-white/50"
+              className="absolute right-0 top-0 hidden bg-white/50 min-[880px]:block min-[880px]:w-px"
               variants={borderYVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
@@ -162,8 +162,8 @@ const Footer = (props: Props) => {
             ></motion.div>
           </motion.div>
         </div>
-        <div className="grid w-full grid-cols-2 gap-[20px] pb-[40px]">
-          <div className="flex justify-start">
+        <div className="grid w-full grid-cols-1 gap-[20px] pb-[40px] pt-[20px] min-[880px]:grid-cols-2">
+          <div className="flex items-center justify-center min-[880px]:justify-start">
             <div className="mr-[20px]">
               <div className="group flex items-center justify-center">
                 <Link
@@ -216,7 +216,7 @@ const Footer = (props: Props) => {
             </div>
           </div>
 
-          <div className="flex justify-end font-jost text-[11px] font-normal leading-[20px] tracking-[2px] text-[#CED8D8]">
+          <div className="flex items-center justify-center font-jost text-[11px] font-normal leading-[20px] tracking-[2px] text-[#CED8D8] min-[880px]:justify-end">
             <p>
               © 2024
               <Link

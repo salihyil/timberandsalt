@@ -36,18 +36,18 @@ const Chefs = (props: Props) => {
   );
 
   return (
-    <div ref={currentRef} className="flex">
-      <div className="w-1/2">
+    <div ref={currentRef} className="flex max-[880px]:flex-col">
+      <div className="w-full max-[880px]:mb-[70px] min-[680px]:pl-[90px] min-[680px]:pt-[9%] min-[880px]:w-1/2">
         <div className="mt-[35px]">
           <AnimatedTextSplitter
             text="CHEF'S"
             className="my-[10px] font-cormorant tracking-[10px]"
-            letterClassName="text-4xl text-[#ffffff29] sm:text-5xl md:text-6xl lg:text-[75px] xl:text-[85px] 2xl:text-[100px]"
+            letterClassName="text-[#ffffff29] text-6xl min-[880px]:text-[75px] lg:text-[75px] xl:text-[85px] 2xl:text-[100px]"
             spaceBetweenWords="0.5em"
             isInView={isInView}
           />
         </div>
-        <div className="w-[58%] pl-[33px]">
+        <div className="w-[58%] pl-[33px] max-[880px]:w-full max-[880px]:pr-[33px]">
           <h2>Only the finest food & great service</h2>
           <p className="my-[10px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -68,7 +68,7 @@ const Chefs = (props: Props) => {
           </Button>
         </div>
       </div>
-      <div className="relative w-1/2">
+      <div className="relative h-dvh w-11/12 max-[880px]:ml-7 min-[880px]:w-1/2">
         <div className="h-full overflow-hidden">
           <motion.div
             className="h-full"
@@ -78,7 +78,7 @@ const Chefs = (props: Props) => {
             }}
           >
             <Image
-              className="h-[100%] w-full object-cover"
+              className="h-full w-full object-cover"
               src={"/steak2.jpeg"}
               alt="steak"
               fill
@@ -87,9 +87,15 @@ const Chefs = (props: Props) => {
         </div>
         <motion.div
           style={{ translateY }}
-          className="absolute -left-[135px] top-1/2"
+          className="absolute -left-[15%] top-1/2 max-[880px]:-left-[5%]"
         >
-          <Image src={"/chef.jpg"} alt="chef" width={202} height={281} />
+          <Image
+            className="max-[880px]:max-w-[70%]"
+            src={"/chef.jpg"}
+            alt="chef"
+            width={202}
+            height={281}
+          />
         </motion.div>
       </div>
     </div>

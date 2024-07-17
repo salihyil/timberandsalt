@@ -35,16 +35,13 @@ export default function RootLayout({
       <body
         className={`${jost.variable} ${cormorant.variable} ${mrsSaintDelafield.variable}`}
       >
-        <div className="relative">
+       
           <Header />
           <header className="mobile-header"></header>
-
           {children}
-
           <Footer />
-
           <Toaster />
-        </div>
+        
       </body>
     </html>
   );

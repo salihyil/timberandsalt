@@ -17,14 +17,7 @@ const config = {
     },
     container: {
       center: true,
-      padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        md: "3rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
-      },
+
       screens: {
         sm: "640px",
         md: "768px",
@@ -102,9 +95,10 @@ const config = {
         fallingStar1: "fallingStar1  5s ease-out infinite",
         fallingStar2: "fallingStar2  5s ease-out infinite",
         spin: "spin 7s linear infinite",
-      },screens: {
-        '2xl': '1514px',
-      }
+      },
+      screens: {
+        "2xl": "1514px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

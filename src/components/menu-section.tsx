@@ -6,19 +6,20 @@ import { useRef } from "react";
 
 type Props = {};
 
-const SectionMenu = (props: Props) => {
+const MenuSection = (props: Props) => {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
-
-  const isInViewMenu1 = useInView(ref1, { once: true });
-  const isInViewMenu2 = useInView(ref2, { once: true });
-
+  const ref3 = useRef(null);
+  const isInViewMenu1 = useInView(ref1, { once: false });
+  const isInViewMenu2 = useInView(ref2, { once: false });
+  const isInViewMenu3 = useInView(ref3, { once: false });
   const variants = {
     hidden: { scale: 0.5, opacity: 0 },
     visible: { scale: 1, opacity: 1 },
   };
+
   return (
-    <section className="flex h-full flex-shrink flex-grow basis-auto gap-[100px] px-[6%] py-[140px]">
+    <section className="flex h-full flex-shrink flex-grow basis-auto gap-[100px] px-[6%] py-[140px] max-[880px]:flex-col">
       <div className="flex basis-4/12 flex-col items-center gap-y-[80px]">
         <motion.div
           ref={ref1}
@@ -36,7 +37,6 @@ const SectionMenu = (props: Props) => {
             height={1351}
           />
         </motion.div>
-
         <motion.div
           ref={ref2}
           className="flex w-full items-center justify-center"
@@ -132,10 +132,10 @@ const SectionMenu = (props: Props) => {
         </div>
       </div>
       <motion.div
-        ref={ref1}
+        ref={ref3}
         variants={variants}
         initial="hidden"
-        animate={isInViewMenu1 ? "visible" : "hidden"}
+        animate={isInViewMenu3 ? "visible" : "hidden"}
         transition={{ duration: 1.3, ease: [0.39, 0.575, 0.565, 1] }}
         className="flex basis-4/12 flex-col items-center justify-center"
       >
@@ -153,4 +153,4 @@ const SectionMenu = (props: Props) => {
   );
 };
 
-export default SectionMenu;
+export default MenuSection;

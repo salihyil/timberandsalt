@@ -36,11 +36,9 @@ const Comments = (props: Props) => {
     });
   }, [api]);
 
-  console.log(current);
-
   return (
     <div
-      className="relative flex min-h-[800px] items-center max-2xl:min-h-[600px]"
+      className="flex min-h-[600px] items-center"
       style={{
         accentColor: "#1F3634",
         backgroundImage:
@@ -49,36 +47,30 @@ const Comments = (props: Props) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="relative flex w-full items-center text-center">
-        <div className="basis-1/2">
-          <div className="max-[1600px]:px-[9%] max-[1512px]:px-[7%] max-[1368px]:px-[5%]">
-            <p className="absolute bottom-0 right-[55%] z-[2] -rotate-[6deg] pt-[10px] font-mrsSaintDelafield text-[55px] leading-[35px] text-[#B58C67]">
-              Our gest say about us
-            </p>
-
-            <AnimatePresence initial={false}>
-              <motion.div
-                key={current}
-                className="absolute left-0 top-0 h-full w-1/2"
-                style={{
-                  backgroundImage: `url(${items[current - 1].backgroundImage})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                }}
-                initial={{ x: "10%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "-100%" }}
-                transition={{ type: "tween", duration: 0.5 }}
-              />
-            </AnimatePresence>
-          </div>
+      <div className="relative flex w-full flex-col items-center text-center min-[880px]:flex-row">
+        <div className="relative w-full min-[880px]:basis-1/2">
+          <AnimatePresence initial={false}>
+            <motion.div
+              /*   key={current} */
+              className="h-[500px] w-full"
+              style={{
+                backgroundImage: `url(/comments/comment1.jpg)`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+              }}
+            />
+          </AnimatePresence>
+          <p className="absolute bottom-20 left-0 z-[2] -rotate-[6deg] pt-[10px] font-mrsSaintDelafield text-[55px] leading-[35px] text-[#B58C67] min-[880px]:bottom-[5px] min-[880px]:left-1/2">
+            Our gest say about us
+          </p>
         </div>
-        <div ref={currentRef} className="basis-1/2">
-          <div className="max-w-[1600px]:pl-[11%] max-w-[1600px]:pr-[6%] max-w-[1512px]:pl-[10%] max-w-[1512px]:pr-[5%] max-w-[1368px]:pl-[8%] max-w-[1368px]:pr-[3%] w-[50vw] pl-[120px] text-left">
+
+        <div ref={currentRef} className="w-full min-[880px]:basis-1/2">
+          <div className="pl-[120px] text-left max-[1600px]:pl-[11%] max-[1600px]:pr-[6%] max-[1512px]:pl-[10%] max-[1512px]:pr-[5%] max-[1368px]:pl-[8%] max-[1368px]:pr-[3%]">
             <AnimatedTextSplitter
               text="THEY SAY"
-              className="relative bottom-[50px] my-[10px] font-cormorant tracking-[10px]"
+              className="bottom-[50px] my-[10px] font-cormorant tracking-[10px]"
               letterClassName="text-4xl text-[#ffffff29] sm:text-5xl md:text-6xl lg:text-[75px] xl:text-[85px] 2xl:text-[100px]"
               spaceBetweenWords="0.5em"
               isInView={isInView}
@@ -107,8 +99,10 @@ const Comments = (props: Props) => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <div className="absolute -bottom-4 left-1/2 max-[880px]:bottom-10">
+                <CarouselPrevious />
+                <CarouselNext />
+              </div>
             </Carousel>
           </div>
         </div>

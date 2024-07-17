@@ -11,7 +11,7 @@ type StickyHeaderProps = {
 const StickyHeader = ({ isScrollUp, isInView }: StickyHeaderProps) => {
   return (
     <div
-      className={`fixed top-0 z-[100] flex w-full items-center justify-center bg-[#0003] px-[50px] backdrop-blur-2xl transition-all duration-300 ease-in-out ${isScrollUp && !isInView ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
+      className={`top-0 z-[100] hidden w-full items-center justify-center bg-[#0003] px-[50px] backdrop-blur-2xl transition-all duration-300 ease-in-out min-[1200px]:fixed min-[1200px]:flex ${isScrollUp && !isInView ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
     >
       <NavBar className={"bottom-0"} />
 

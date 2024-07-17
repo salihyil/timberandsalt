@@ -9,7 +9,7 @@ export const NavBar = ({ className }: { className?: string }) => {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden h-full w-full items-center justify-start font-jost xl:flex">
+    <nav className="flex h-full w-full items-center justify-start font-jost max-[1200px]:hidden">
       <ul className="relative flex h-full items-center whitespace-nowrap">
         {navItems.map((navItem, idx: number) => {
           const isActive = pathname === navItem.link;
