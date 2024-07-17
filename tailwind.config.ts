@@ -1,25 +1,41 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
+    fontFamily: {
+      jost: ["var(--font-jost)", "sans-serif"],
+      cormorant: ["var(--font-cormorant)", "sans-serif"],
+      mrsSaintDelafield: ["var(--font-mrs-saint-delafield)", "sans-serif"],
+    },
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        md: "3rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
       screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1200px",
         "2xl": "1400px",
       },
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
+        "button-border": "hsl(var(--button-border-color))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -59,6 +75,10 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "spin-360": {
+          to: { transform: "rotate(0deg)" },
+          from: { transform: "rotate(360deg)" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -67,14 +87,27 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        fallingStar1: {
+          "0%": { transform: "translateY(0)" },
+          "100% ": { transform: "translateY(100vh)" },
+        },
+        fallingStar2: {
+          "0%": { transform: "translateY(0)" },
+          "100% ": { transform: "translateY(100vh)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-      },
+        fallingStar1: "fallingStar1  5s ease-out infinite",
+        fallingStar2: "fallingStar2  5s ease-out infinite",
+        spin: "spin 7s linear infinite",
+      },screens: {
+        '2xl': '1514px',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
