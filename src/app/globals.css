@@ -73,14 +73,14 @@
   }
 
   h2 {
-    @apply font-jost text-[36px] uppercase leading-[1.13889em] tracking-[.15em] text-white;
+    @apply font-cinzel text-[36px] uppercase leading-[1.13889em] tracking-[.15em] text-white;
   }
   h5 {
-    @apply font-jost text-[17px] font-light uppercase leading-[1.58824em] tracking-[.14em] text-white;
+    @apply font-cinzel text-[17px] font-light uppercase leading-[1.58824em] tracking-[.14em] text-white;
   }
 
   h6 {
-    @apply mt-[25px] font-jost text-[12px] font-normal uppercase leading-[1.91667em] tracking-[.15em] text-white;
+    @apply mt-[25px] font-cinzel text-[12px] font-normal uppercase leading-[1.91667em] tracking-[.15em] text-white;
   }
   p {
     @apply font-jost;

@@ -48,7 +48,7 @@ const Chefs = (props: Props) => {
           />
         </div>
         <div className="w-[58%] pl-[33px] max-[880px]:w-full max-[880px]:pr-[33px]">
-          <h2>Only the finest food & great service</h2>
+          <h2 className='font-cinzel'>Only the finest food & great service</h2>
           <p className="my-[10px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

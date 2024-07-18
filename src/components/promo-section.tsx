@@ -10,7 +10,7 @@ const PromoSection = (props: Props) => {
           <Image src={"/icon-img.png"} alt="icon" width={150} height={150} />
         </div>
         <h3 className="mt-8 max-w-[570px] text-center text-[28px] text-white">
-          <span className="uppercase leading-[1.3em] tracking-[.12em]">
+          <span className="font-cinzel uppercase leading-[1.3em] tracking-[.12em]">
             Timber & Salt is for everyone who collects beautiful moments
           </span>
         </h3>

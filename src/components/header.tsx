@@ -53,7 +53,7 @@ const Header = (props: Props) => {
 
         <div className="flex h-full w-full items-center justify-end max-[1200px]:hidden">
           <Button asChild>
-            <Link href={"/book-a-table"}>
+            <Link className="font-cinzel" href={"/book-a-table"}>
               Book a table
               <span className="pointer-events-none absolute inset-0 m-1">
                 <span className="absolute left-0 top-0 h-px w-0 bg-button-border opacity-50 transition-all duration-700 ease-in-out group-hover:w-full"></span>
@@ -79,7 +79,7 @@ const Header = (props: Props) => {
       {!isInView && (
         <Button
           size={"icon"}
-          className="fixed bottom-[70px] right-[2.7%] z-[100] size-[50px] transition-all"
+          className="font-cinzel fixed bottom-[70px] right-[2.7%] z-[100] size-[50px] transition-all"
           onClick={scrollToTop}
         >
           Top

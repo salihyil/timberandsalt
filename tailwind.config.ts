@@ -14,6 +14,7 @@ const config = {
       jost: ["var(--font-jost)", "sans-serif"],
       cormorant: ["var(--font-cormorant)", "sans-serif"],
       mrsSaintDelafield: ["var(--font-mrs-saint-delafield)", "sans-serif"],
+      cinzel: ["var(--font-cinzel)", "sans-serif"],
     },
     container: {
       center: true,

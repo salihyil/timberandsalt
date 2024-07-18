@@ -168,10 +168,10 @@ const Footer = (props: Props) => {
               <div className="group flex items-center justify-center">
                 <Link
                   target="_blank"
-                  className="font-jost text-[11px] font-normal uppercase text-white"
+                  className="text-[11px] font-normal uppercase text-white"
                   href="https://www.facebook.com/timberandsalt/"
                 >
-                  <div>Facebok</div>
+                  <div className="font-cinzel">Facebok</div>
                   <div className="h-px w-0 bg-button-border transition-all duration-300 group-hover:w-full"></div>
                 </Link>
                 <Image
@@ -187,10 +187,10 @@ const Footer = (props: Props) => {
               <div className="group flex items-center justify-center">
                 <Link
                   target="_blank"
-                  className="font-jost text-[11px] font-normal uppercase text-white"
+                  className="text-[11px] font-normal uppercase text-white"
                   href="https://www.instagram.com/timberandsaltrwc/"
                 >
-                  <div>Instagram</div>
+                  <div className="font-cinzel">Instagram</div>
                   <div className="h-px w-0 bg-button-border transition-all duration-300 group-hover:w-full"></div>
                 </Link>
                 <Image
@@ -206,18 +206,18 @@ const Footer = (props: Props) => {
               <div className="group flex items-center justify-center">
                 <Link
                   target="_blank"
-                  className="font-jost text-[11px] font-normal uppercase text-white"
+                  className="text-[11px] font-normal uppercase text-white"
                   href="https://www.yelp.com/biz/timber-and-salt-redwood-city"
                 >
-                  <div>Yelp</div>
+                  <div className="font-cinzel">Yelp</div>
                   <div className="h-px w-0 bg-button-border transition-all duration-300 group-hover:w-full"></div>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center justify-center font-jost text-[11px] font-normal leading-[20px] tracking-[2px] text-[#CED8D8] min-[880px]:justify-end">
-            <p>
+          <div className="flex items-center justify-center text-[11px] font-normal leading-[20px] tracking-[2px] text-[#CED8D8] min-[880px]:justify-end">
+            <p className="font-cinzel">
               © 2024
               <Link
                 className="uppercase"

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant, Jost, Mrs_Saint_Delafield } from "next/font/google";
+import { Cormorant, Jost, Mrs_Saint_Delafield, Cinzel } from "next/font/google";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -15,6 +15,11 @@ const mrsSaintDelafield = Mrs_Saint_Delafield({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-mrs-saint-delafield",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jost.variable} ${cormorant.variable} ${mrsSaintDelafield.variable}`}
+        className={`${jost.variable} ${cormorant.variable} ${mrsSaintDelafield.variable} ${cinzel.variable}`}
       >
        
           <Header />

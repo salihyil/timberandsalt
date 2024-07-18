@@ -57,7 +57,7 @@ const MenuSection = (props: Props) => {
       <div className="flex basis-4/12 flex-col items-center justify-start">
         <div className="flex flex-col items-center justify-center">
           <div className="my-[25px] flex flex-col items-center justify-center">
-            <h5>Discover Our Menu</h5>
+            <h5 className='font-cinzel'>Discover Our Menu</h5>
             <Image src={"/menu/icon.png"} alt="menu1" width={8} height={4} />
           </div>
           <div className="my-[10px] space-y-3 text-center">

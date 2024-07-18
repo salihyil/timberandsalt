@@ -87,7 +87,7 @@ const Cuisine = (props: Props) => {
           />
         </div>
         <div className="w-[58%] pl-[33px] max-[880px]:w-full max-[880px]:pr-[33px]">
-          <h2>Our Goals & History</h2>
+          <h2 className="font-cinzel">Our Goals & History</h2>
           <p className="my-[10px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
