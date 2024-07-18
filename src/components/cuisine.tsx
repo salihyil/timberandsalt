@@ -53,9 +53,9 @@ const Cuisine = (props: Props) => {
   return (
     <div
       ref={currentRef}
-      className="flex py-[100px] pl-[2.8%] max-[880px]:flex-col min-[880px]:py-[140px] "
+      className="flex items-center justify-center py-[100px] pl-[2.8%] max-[880px]:flex-col min-[880px]:py-[140px]"
     >
-      <div className="h-[500px] w-5/6 min-[880px]:w-1/2">
+      <div className="h-[500px] w-3/5 min-[880px]:w-1/2">
         <motion.div
           className="relative h-full"
           style={{
@@ -70,7 +70,7 @@ const Cuisine = (props: Props) => {
         >
           <motion.div
             style={{ translateY }}
-            className="absolute -bottom-[50px] -right-[50px]"
+            className="absolute -bottom-[50px] -right-[50px] w-1/2 min-[880px]:w-auto"
           >
             <Image src={"/wine.png"} alt="wine" width={202} height={281} />
           </motion.div>
