@@ -79,7 +79,7 @@ const Header = (props: Props) => {
 
       <nav
         className={cn(
-          `fixed z-10 w-full overflow-hidden bg-black px-14 py-10 transition-all duration-500`,
+          `fixed z-10 w-full overflow-hidden bg-black px-14 py-10 transition-all duration-500 min-[1200px]:hidden`,
           isOpen ? "h-full opacity-100" : "h-0 opacity-0",
         )}
         role="navigation"
