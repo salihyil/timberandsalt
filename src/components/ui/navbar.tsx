@@ -12,7 +12,7 @@ export const NavBar = ({ className }: { className?: string }) => {
     <nav className="flex h-full w-full items-center justify-start font-cinzel max-[1200px]:hidden">
       <ul className="relative flex h-full items-center whitespace-nowrap">
         {navItems.map((navItem, idx: number) => {
-          const isActive = pathname === navItem.link;
+          const isActive = pathname === navItem.href;
 
           return (
             <li
@@ -20,7 +20,7 @@ export const NavBar = ({ className }: { className?: string }) => {
               className="mx-[22px] h-full first:ml-0 last:mr-0"
             >
               <Link
-                href={navItem.link}
+                href={navItem.href}
                 className="group relative flex h-full items-center text-xs font-normal uppercase tracking-widest"
               >
                 <span className="text-[12px] text-white">{navItem.name}</span>

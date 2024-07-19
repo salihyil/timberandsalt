@@ -3,19 +3,19 @@ import { NavItems } from "@/app/types";
 export const navItems: NavItems = [
   {
     name: "Home",
-    link: "/",
+    href: "/",
   },
   {
     name: "Menu",
-    link: "/menu",
+    href: "/menu",
   },
   {
     name: "Gallery",
-    link: "/gallery",
+    href: "/gallery",
   },
   {
     name: "Contact Us",
-    link: "/contact-us",
+    href: "/contact-us",
   },
 ];
 

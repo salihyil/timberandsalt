@@ -3,8 +3,12 @@
 import { useInView } from "framer-motion";
 import Image from "next/image";
 
+import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { navItems } from "./constants";
+import MobileMenu from "./mobile-menu";
 import StickyHeader from "./sticky-header";
 import { Button } from "./ui/button";
 import { NavBar } from "./ui/navbar";
@@ -12,10 +16,12 @@ import { NavBar } from "./ui/navbar";
 type Props = {};
 
 const Header = (props: Props) => {
+  const pathname = usePathname();
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [isScrollUp, setIsScrollUp] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +47,7 @@ const Header = (props: Props) => {
   };
   return (
     <header ref={ref} className="page-header dark:bg-white">
-      <div className={`header-inner`}>
+      <div className={`header-inner ${isOpen && "mb-7"}`}>
         <NavBar />
         <Link
           className="relative mt-8 flex flex-shrink-0 items-center justify-center"
@@ -68,7 +74,43 @@ const Header = (props: Props) => {
             </Link>
           </Button>
         </div>
+        <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
+
+      <nav
+        className={cn(
+          `fixed z-10 w-full overflow-hidden bg-black px-14 py-10 transition-all duration-500`,
+          isOpen ? "h-full opacity-100" : "h-0 opacity-0",
+        )}
+        role="navigation"
+      >
+        <ul className="flex flex-col items-center justify-center">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+
+            return (
+              <li key={item.name} className="">
+                <Link
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "group relative font-cinzel text-3xl font-normal uppercase leading-[1.91667em] tracking-[.15em] text-white",
+                  )}
+                >
+                  {item.name}
+                  <span
+                    className={cn(
+                      "absolute bottom-0 left-0 h-px bg-button-border transition-all duration-500",
+                      isActive ? "w-full" : "w-0 group-hover:w-full",
+                    )}
+                  ></span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+
       <StickyHeader isScrollUp={isScrollUp} isInView={isInView} />
 
       {!isInView && (

@@ -93,7 +93,7 @@
   }
 
   .header-inner {
-    @apply relative flex h-full items-center justify-between border-b-0 border-b-transparent px-[50px] min-[1200px]:mt-[30px] xl:justify-center;
+    @apply relative flex h-full items-center justify-between border-b-0 border-b-transparent pr-[24px] transition-all min-[600px]:px-[50px] min-[1200px]:mt-[30px] xl:justify-center;
   }
 
   .carausel-text-before::before {
