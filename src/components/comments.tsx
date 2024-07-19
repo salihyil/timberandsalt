@@ -41,7 +41,7 @@ const Comments = (props: Props) => {
 
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 100 : -100,
+      x: direction > 0 ? 0 : -100,
       opacity: 0,
     }),
     center: {
@@ -52,7 +52,7 @@ const Comments = (props: Props) => {
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? 100 : -100,
+      x: direction < 0 ? 0 : -100,
       opacity: 0,
       y: 0,
     }),
