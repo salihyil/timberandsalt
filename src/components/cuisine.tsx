@@ -81,7 +81,7 @@ const Cuisine = (props: Props) => {
           <AnimatedTextSplitter
             text="CUISINE"
             className="my-[10px] font-cormorant tracking-[10px]"
-            letterClassName="text-4xl text-[#ffffff29] sm:text-5xl md:text-6xl lg:text-[75px] xl:text-[85px] 2xl:text-[100px]"
+            letterClassName="text-4xl  sm:text-5xl md:text-6xl lg:text-[75px] xl:text-[85px] 2xl:text-[100px]"
             spaceBetweenWords="0.5em"
             isInView={isInView}
           />

@@ -40,17 +40,21 @@ const Header = (props: Props) => {
     });
   };
   return (
-    <header ref={ref} className="page-header">
+    <header ref={ref} className="page-header dark:bg-white">
       <div className={`header-inner`}>
         <NavBar />
-
         <Link
           className="relative mt-8 flex flex-shrink-0 items-center justify-center"
           href="/"
         >
-          <Image src={"/logo.png"} alt="logo" height={200} width={200} />
+          <Image
+            className="max-w-[150px]"
+            src={"/logo.png"}
+            alt="logo"
+            height={200}
+            width={200}
+          />
         </Link>
-
         <div className="flex h-full w-full items-center justify-end max-[1200px]:hidden">
           <Button asChild>
             <Link className="font-cinzel" href={"/book-a-table"}>
@@ -64,22 +68,13 @@ const Header = (props: Props) => {
             </Link>
           </Button>
         </div>
-
-        <span className="qodef-m-icon qodef--open">
-          <span className="qodef-m-lines">
-            <span className="qodef-m-line qodef--1"></span>
-            <span className="qodef-m-line qodef--2"></span>
-            <span className="qodef-m-line qodef--3"></span>
-            <span className="qodef-m-line qodef--4"></span>
-          </span>
-        </span>
       </div>
       <StickyHeader isScrollUp={isScrollUp} isInView={isInView} />
 
       {!isInView && (
         <Button
           size={"icon"}
-          className="font-cinzel fixed bottom-[70px] right-[2.7%] z-[100] size-[50px] transition-all"
+          className="fixed bottom-[70px] right-[2.7%] z-[100] size-[50px] font-cinzel transition-all"
           onClick={scrollToTop}
         >
           Top

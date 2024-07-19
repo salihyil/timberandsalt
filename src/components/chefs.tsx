@@ -42,13 +42,13 @@ const Chefs = (props: Props) => {
           <AnimatedTextSplitter
             text="CHEF'S"
             className="my-[10px] font-cormorant tracking-[10px]"
-            letterClassName="text-[#ffffff29] text-6xl min-[880px]:text-[75px] lg:text-[75px] xl:text-[85px] 2xl:text-[100px]"
+            letterClassName=" text-6xl min-[880px]:text-[75px] lg:text-[75px] xl:text-[85px] 2xl:text-[100px]"
             spaceBetweenWords="0.5em"
             isInView={isInView}
           />
         </div>
         <div className="w-[58%] pl-[33px] max-[880px]:w-full max-[880px]:pr-[33px]">
-          <h2 className='font-cinzel'>Only the finest food & great service</h2>
+          <h2 className="font-cinzel">Only the finest food & great service</h2>
           <p className="my-[10px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

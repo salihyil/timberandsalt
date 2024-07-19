@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant, Jost, Mrs_Saint_Delafield, Cinzel } from "next/font/google";
+import { Cinzel, Cormorant, Jost, Mrs_Saint_Delafield } from "next/font/google";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -40,13 +40,10 @@ export default function RootLayout({
       <body
         className={`${jost.variable} ${cormorant.variable} ${mrsSaintDelafield.variable} ${cinzel.variable}`}
       >
-       
-          <Header />
-          <header className="mobile-header"></header>
-          {children}
-          <Footer />
-          <Toaster />
-        
+        <Header />
+        {children}
+        <Footer />
+        <Toaster />
       </body>
     </html>
   );

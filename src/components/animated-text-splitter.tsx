@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import React from "react";
 import { letterVariants } from "./constants";
@@ -28,7 +29,7 @@ const AnimatedTextSplitter = ({
               initial="initial"
               animate={isInView ? "animate" : "initial"}
               custom={letterIndex}
-              className={`inline-block ${letterClassName}`}
+              className={cn(`inline-block text-[#494949]`, letterClassName)}
             >
               {letter}
             </motion.span>

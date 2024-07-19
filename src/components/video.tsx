@@ -1,9 +1,4 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
 import Play from "../../public/video/play";
 
@@ -23,16 +18,13 @@ const Video = (props: Props) => {
           <DialogTrigger>
             <Play />
           </DialogTrigger>
-          <DialogContent className="min-w-fit border-none bg-transparent p-10">
-            <DialogHeader>
-              <iframe
-                title="Vimeo video player"
-                src="https://player.vimeo.com/video/289286804?h=dd3682f033"
-                width="640"
-                height="335"
-                allow="autoplay; fullscreen; picture-in-picture"
-              ></iframe>
-            </DialogHeader>
+          <DialogContent className="h-1/2 w-full border-none bg-transparent">
+            <iframe
+              className="h-full w-full"
+              title="Vimeo video player"
+              src="https://player.vimeo.com/video/289286804?h=dd3682f033"
+              allow="autoplay; fullscreen; picture-in-picture"
+            ></iframe>
           </DialogContent>
         </Dialog>
       </div>
