@@ -46,7 +46,7 @@ const Header = (props: Props) => {
     });
   };
   return (
-    <header ref={ref} className="page-header dark:bg-white">
+    <header ref={ref} className="page-header">
       <div className={`header-inner ${isOpen && "mb-7"}`}>
         <NavBar />
         <Link
