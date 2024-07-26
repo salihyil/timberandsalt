@@ -3,6 +3,7 @@ import { Cinzel, Cormorant, Jost, Mrs_Saint_Delafield } from "next/font/google";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import SplashScreenManager from "@/components/splash-screen-manager";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
@@ -40,9 +41,11 @@ export default function RootLayout({
       <body
         className={`${jost.variable} ${cormorant.variable} ${mrsSaintDelafield.variable} ${cinzel.variable}`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <SplashScreenManager>
+          <Header />
+          {children}
+          <Footer />
+        </SplashScreenManager>
         <Toaster />
       </body>
     </html>

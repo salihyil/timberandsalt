@@ -32,7 +32,7 @@ export default function Home() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="font-cinzel text-center text-[45px] uppercase tracking-widest text-white"
+            className="text-center font-cinzel text-[45px] uppercase tracking-widest text-white"
           >
             Good Times Great Tastes
           </motion.div>
