@@ -1,31 +1,16 @@
-import anime from "animejs";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
 
-const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
-  const animate = () => {
-    const loader = anime.timeline({
-      complete: () => finishLoading(),
-    });
-    loader.add({
-      targets: "#logo",
-      delay: 0,
-      scale: 2,
-      duration: 2000,
-      easing: "easeInOutExpo",
-    });
-  };
-
-  useEffect(() => {
-    animate();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+const SplashScreen = () => {
   return (
     <div className="relative flex h-screen items-center justify-center bg-black/30 backdrop-blur">
-      <div className="relative z-10 flex size-44 items-center justify-center md:size-64">
+      <motion.div
+        className="relative z-10 flex size-44 items-center justify-center md:size-64"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, scale: 2 }}
+        transition={{ duration: 1 }}
+      >
         <Image
-          id="logo"
           src="/logo.png"
           alt="logo"
           fill
@@ -34,7 +19,7 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
           priority
           sizes="(max-width: 768px) 100vw, 500px"
         />
-      </div>
+      </motion.div>
       <video
         className="absolute z-0 object-contain blur-sm lg:h-[500px]"
         id="video"

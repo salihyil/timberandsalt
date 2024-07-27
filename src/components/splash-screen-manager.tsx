@@ -13,18 +13,10 @@ export default function SplashScreenManager({
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowSplash(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timeout);
-  });
+  }, []);
 
-  const finishLoading = () => {
-    setShowSplash(false);
-  };
-
-  return showSplash && isHome ? (
-    <SplashScreen finishLoading={finishLoading} />
-  ) : (
-    children
-  );
+  return showSplash && isHome ? <SplashScreen /> : children;
 }
