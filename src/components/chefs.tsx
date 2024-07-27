@@ -71,13 +71,15 @@ const Chefs = (props: Props) => {
       <div className="relative h-dvh w-11/12 max-[880px]:ml-7 min-[880px]:w-1/2">
         <div className="h-full overflow-hidden">
           <motion.div
-            className="h-full"
+            className="relative h-full"
             style={{
               scale: imageScale,
               y: imageTranslateY,
             }}
           >
             <Image
+              sizes="100%"
+              priority
               className="h-full w-full object-cover"
               src={"/steak2.jpeg"}
               alt="steak"

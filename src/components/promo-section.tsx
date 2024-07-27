@@ -7,7 +7,16 @@ const PromoSection = (props: Props) => {
     <section className="pb-[100px] pt-[140px]">
       <div className="flex flex-col items-center justify-center">
         <div className="mx-[60px] max-w-[50%] text-center">
-          <Image src={"/icon-img.png"} alt="icon" width={150} height={150} />
+          <Image
+            src={"/icon-img.png"}
+            alt="icon"
+            width={150}
+            height={150}
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
         </div>
         <h3 className="mt-8 max-w-[570px] text-center text-[28px] text-white">
           <span className="font-cinzel uppercase leading-[1.3em] tracking-[.12em]">
