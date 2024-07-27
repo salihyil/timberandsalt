@@ -36,7 +36,7 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
         />
       </div>
       <video
-        className="absolute z-0 object-contain lg:h-[500px]"
+        className="absolute z-0 object-contain blur-sm lg:h-[500px]"
         id="video"
         autoPlay
         muted
