@@ -11,7 +11,7 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
       targets: "#logo",
       delay: 0,
       scale: 2,
-      duration: 3000,
+      duration: 2000,
       easing: "easeInOutExpo",
     });
   };
@@ -23,17 +23,20 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
 
   return (
     <div className="relative flex h-screen items-center justify-center bg-black/30 backdrop-blur">
-      <div className="absolute z-10 flex size-40 h-full w-full items-center justify-center md:size-64">
+      <div className="relative z-10 flex size-44 items-center justify-center md:size-64">
         <Image
           id="logo"
           src="/logo.png"
-          alt="Logo"
+          alt="logo"
           fill
+          role="img"
           className="object-contain"
+          priority
+          sizes="(max-width: 768px) 100vw, 500px"
         />
       </div>
       <video
-        className="absolute z-0 h-[500px] max-h-full w-full max-w-full object-contain"
+        className="absolute z-0 object-contain lg:h-[500px]"
         id="video"
         autoPlay
         muted

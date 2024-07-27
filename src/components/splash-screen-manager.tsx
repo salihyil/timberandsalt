@@ -13,7 +13,7 @@ export default function SplashScreenManager({
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowSplash(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   });
