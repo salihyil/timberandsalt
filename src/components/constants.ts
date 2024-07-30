@@ -1,21 +1,21 @@
-import { NavItems } from "@/app/types";
+import { NavItems, Routes } from "@/app/types";
 
 export const navItems: NavItems = [
   {
     name: "Home",
-    href: "/",
+    link: Routes.HOME,
   },
   {
     name: "Menu",
-    href: "/menu",
+    link: Routes.MENU,
   },
   {
     name: "Gallery",
-    href: "/gallery",
+    link: Routes.GALLERY,
   },
   {
     name: "Contact Us",
-    href: "/contact-us",
+    link: Routes.CONTACT_US,
   },
 ];
 

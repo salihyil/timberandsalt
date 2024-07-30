@@ -1,9 +1,8 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { useInView } from "framer-motion";
 import Image from "next/image";
-
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -85,19 +84,19 @@ const Header = (props: Props) => {
         role="navigation"
       >
         <ul className="flex flex-col items-center justify-center">
-          {navItems.map((item) => {
-            const isActive = pathname === item.href;
+          {navItems.map((navItem) => {
+            const isActive = pathname === navItem.link;
 
             return (
-              <li key={item.name} className="">
+              <li key={navItem.name} className="">
                 <Link
-                  href={item.href}
+                  href={navItem.link}
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     "group relative font-cinzel text-3xl font-normal uppercase leading-[1.91667em] tracking-[.15em] text-white",
                   )}
                 >
-                  {item.name}
+                  {navItem.name}
                   <span
                     className={cn(
                       "absolute bottom-0 left-0 h-px bg-button-border transition-all duration-500",
