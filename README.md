@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Timber & Salt Restaurant Website
 
-## Getting Started
+A modern, elegant website for Timber & Salt restaurant built with Next.js 14, TypeScript, and Tailwind CSS. The website features smooth animations, responsive design, and an interactive user interface.
 
-First, run the development server:
+## 🌟 Features
+
+- **Modern Design**: Elegant UI with custom animations and transitions
+- **Responsive Layout**: Fully responsive design that works across all devices
+- **Interactive Components**: 
+  - Dynamic menu sections
+  - Table reservation system
+  - Image carousels
+  - Parallax scrolling effects
+- **Performance Optimized**: Built with Next.js 14 for optimal performance
+- **Accessibility**: Built with accessibility in mind using ARIA attributes
+- **Dark Mode Support**: Built-in dark mode functionality
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: 
+  - Radix UI
+  - Shadcn/ui
+- **Animation Libraries**:
+  - Framer Motion
+  - Anime.js
+- **Form Handling**: React Hook Form with Zod validation
+- **Other Libraries**:
+  - date-fns
+  - next-themes
+  - embla-carousel
+  - sonner (for toasts)
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-repo/timber-salt.git
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Run the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open [http://localhost:3000](http://localhost:3000) with your browser**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+src/
+├── app/
+│ ├── layout.tsx # Root layout with font configurations
+│ ├── page.tsx # Home page component
+│ └── globals.css # Global styles
+├── components/
+│ ├── ui/ # Reusable UI components
+│ └── ... # Feature-specific components
+└── lib/
+└── utils.ts # Utility functions
+```
 
-## Learn More
+## 🎨 Features & Components
 
-To learn more about Next.js, take a look at the following resources:
+- **Header**: Responsive navigation with mobile menu support
+- **Hero Section**: Full-screen video background with animated text
+- **Menu Section**: Interactive food menu display
+- **Reservation System**: OpenTable integration for table bookings
+- **Gallery**: Image carousel with custom animations
+- **Contact Section**: Contact information with map integration
+- **Footer**: Social media links and restaurant information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project uses several configuration files:
 
-## Deploy on Vercel
+- `tailwind.config.ts`: Tailwind CSS configuration
+- `components.json`: Shadcn/ui configuration
+- `tsconfig.json`: TypeScript configuration
+- `.prettierrc`: Code formatting rules
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Responsive Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The website is fully responsive with breakpoints at:
+- Mobile: < 640px
+- Tablet: 640px - 1024px
+- Desktop: > 1024px
+- Large Desktop: > 1200px
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🔗 Links
+
+- [Live Demo](https://timberandsalt.com)
+- [Restaurant Location](https://www.google.com/maps/place//data=!4m2!3m1!1s0x808fa3ad257d7f7f:0x44e8f6270af8d4fd)
+- [OpenTable Reservations](https://www.opentable.com/restref/client/?rid=255070)
